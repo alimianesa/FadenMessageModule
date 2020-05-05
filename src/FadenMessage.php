@@ -2,15 +2,15 @@
 
 namespace Faden\FadenMessageModule;
 
-use App\Events\MessageAdded;
+//use App\Events\MessageAdded;
 use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class FadenMessage extends Model
 {
-    protected $dispatchesEvents = [
-        'saved'=> MessageAdded::class,
-    ];
+//    protected $dispatchesEvents = [
+//        'saved'=> MessageAdded::class,
+//    ];
 
     protected $fillable = [
         'message_type',
@@ -27,9 +27,12 @@ class FadenMessage extends Model
             'faden_message_user',
             'message_id',
             'user_id'
-
         );
+    }
 
+    public function types()
+    {
+        return $this->hasMany(FadenMessageType::class);
     }
 
 }
