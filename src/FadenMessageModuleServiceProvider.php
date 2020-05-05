@@ -55,7 +55,7 @@ class FadenMessageModuleServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['fadenmessagemodule'];
+        return ['faden-message-module'];
     }
 
     /**
