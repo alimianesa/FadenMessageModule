@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::namespace('Faden\FadenMessageModule\Controllers')->prefix('api')->group(function () {
+Route::namespace('Faden\FadenMessageModule\Http\Controllers')->prefix('api')->group(function () {
    Route::prefix('v1')->group(function () {
        Route::prefix('faden')->group(function () {
            Route::prefix('message')->group(function () {
