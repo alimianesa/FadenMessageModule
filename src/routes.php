@@ -14,11 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-Route::get('/add' , 'FadenMessageController@add');
-Route::get('/message/{id}' , 'FadenMessageController@send');
-
-
+Route::namespace('Faden\FadenMessageModule\Controllers')->prefix('api')->group(function () {
+   Route::prefix('v1')->group(function () {
+       Route::prefix('faden')->group(function () {
+           Route::prefix('message')->group(function () {
+               Route::post('/push' , 'FadenMessageController@push');
+               Route::post('/mail' , 'FadenMessageController@send');
+               Route::post('/send' , 'FadenMessageController@mail');
+           });
+       });
+   });
+});
 
 
 
