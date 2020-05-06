@@ -78,5 +78,5 @@ MIT. Please see the [license file](license.md) for more information.
 [link-downloads]: https://packagist.org/packages/faden/fadenmessagemodule
 [link-travis]: https://travis-ci.org/faden/fadenmessagemodule
 [link-styleci]: https://styleci.io/repos/12345678
-[link-author]: https://github.com/faden
+[link-author]: https://github.com/alimianesa
 [link-contributors]: ../../contributors
